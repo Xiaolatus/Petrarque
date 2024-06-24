@@ -1,0 +1,29 @@
+#message {
+    font-size: 50px;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    width: fit-content;
+    position: absolute;
+    top: 16%;
+    left: 5%;
+    /* top: 16%;
+    left: 9%; */
+}
+
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    background-color: darkgrey;
+    width: fit-content;
+}
+
+.image-gallery img {
+    width: 300px;
+    margin: 10px;
+}
+
+label {
+    font-size: 20px;
+}

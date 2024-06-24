@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Puzzle</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <canvas id="canvas"></canvas>
+        <br /><br />
+    	<label for="difficulty">Difficulté</label>
+        <input type="range" min="2" max="4" value="2" id="difficulty" />
+        <br /><br />
+  <label for="upload">Choisir une image : </label>
+  <input type="file" id="upload" accept="image/*">
+  <br /><br />
+  <label for="default-images">Ou choisir une image parmi cette liste : </label>
+  <div class="image-gallery">
+    <img src="img/calico.jpg" alt="Calico">
+    <img src="img/pandaroux.jpg" alt="Panda Roux">
+    <img src="img/petrarque.jpg" alt="Pétrarque">
+    <!-- Ajoutez d'autres images ici -->
+  </div>
+  <br>
+        <div id="message"></div>
+        <script src="script.js">
+        </script>
+    </body>
+</html>

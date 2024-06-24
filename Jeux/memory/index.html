@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Memory</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="settings">
+        <label for="num-cards">Nombre de cartes (pair): </label>
+        <input type="number" onKeyDown="return false" id="num-cards" min="4" max="20" step="2" value="12">
+        <button id="start-game">Démarrer le jeu</button>
+    </div>
+    <section class="memory-game"></section>
+
+    <script src="script.js"></script>
+</body>
+</html>
