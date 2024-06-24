@@ -137,40 +137,41 @@ document.addEventListener('DOMContentLoaded', () => {
     // Écouteur d'événement pour les clics sur les cartes et les mots
     gameBoard.addEventListener('click', event => {
         const card = event.target.closest('.card');
-        const word = event.target.closest('.word');
-        
         if (card && !lockBoard && !isPlaying) {
-            if (!selectedCard) {
-                selectedCard = card;
-                selectedCard.classList.add('selected');
-                playSound(selectedCard.dataset.word);
-            } else if (selectedCard === card && selectedWord) {
-                // Désélectionner la carte si elle est déjà sélectionnée
+            if (selectedCard === card) {
                 selectedCard.classList.remove('selected');
                 selectedCard = null;
-                playSound(selectedWord.dataset.word);
             } else {
-                // Sélectionner une nouvelle carte
-                selectedCard.classList.remove('selected');
+                if (selectedCard) {
+                    selectedCard.classList.remove('selected');
+                }
                 selectedCard = card;
                 selectedCard.classList.add('selected');
                 playSound(selectedCard.dataset.word);
             }
-        } else if (word && !lockBoard && selectedCard && !isPlaying) {
-            selectedWord = word;
-            selectedWord.classList.add('selected');
-            playSound(selectedWord.dataset.word);
-            checkMatch();
+            if (selectedWord) {
+                checkMatch();
+            }
         }
     });
 
     wordBoard.addEventListener('click', event => {
         const word = event.target.closest('.word');
-        if (word && !lockBoard && selectedCard && !isPlaying) {
-            selectedWord = word;
-            selectedWord.classList.add('selected');
-            playSound(selectedWord.dataset.word);
-            checkMatch();
+        if (word && !lockBoard && !isPlaying) {
+            if (selectedWord === word) {
+                selectedWord.classList.remove('selected');
+                selectedWord = null;
+            } else {
+                if (selectedWord) {
+                    selectedWord.classList.remove('selected');
+                }
+                selectedWord = word;
+                selectedWord.classList.add('selected');
+                playSound(selectedWord.dataset.word);
+            }
+            if (selectedCard) {
+                checkMatch();
+            }
         }
     });
 
