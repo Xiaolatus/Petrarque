@@ -27,7 +27,7 @@ body {
 }
 
 .answer {
-    background: #007bff;
+    background: #1598AA;
     color: white;
     border: none;
     padding: 10px;
@@ -38,11 +38,11 @@ body {
 }
 
 .answer:hover {
-    background: #0056b3;
+    background: #127f8d;
 }
 
 #next-btn, #restart-btn {
-    background: #28a745;
+    background: #EA690B;
     color: white;
     border: none;
     padding: 10px;
@@ -52,7 +52,7 @@ body {
 }
 
 #next-btn:hover, #restart-btn:hover {
-    background: #218838;
+    background: #d46210;
 }
 
 .answer.selected {

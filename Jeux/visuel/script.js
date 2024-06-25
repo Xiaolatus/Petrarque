@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const wordBoard = document.querySelector('.word-board');
     const message = document.getElementById('message');
     const resetButton = document.getElementById('reset-btn');
-    const volumeSlider = document.getElementById('volume-slider'); // Curseur de volume
+    // const volumeSlider = document.getElementById('volume-slider'); // Curseur de volume
 
     const cardData = [
         { word: 'chat', imgSrc: 'img/chat.png', audioSrc: 'sounds/chat.mp3' },
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let lockBoard = false;
     let isPlaying = false; // Variable pour suivre l'état de lecture de l'audio
 
-    let audioVolume = 0.5; // Volume initial
+    // let audioVolume = 0.5; // Volume initial
 
     function createCards() {
         cardData.forEach(data => {
@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const audio = new Audio(audioSrc);
 
         audio.addEventListener('canplaythrough', () => {
-            audio.volume = audioVolume; // Définir le volume
+            // audio.volume = audioVolume; // Définir le volume
             audio.play();
             isPlaying = true; // Mettre à jour l'état de lecture
 
@@ -128,11 +128,11 @@ document.addEventListener('DOMContentLoaded', () => {
         audioVolume = volume;
     }
 
-    // Écouteur d'événement pour le curseur de volume
-    volumeSlider.addEventListener('input', () => {
-        const newVolume = parseFloat(volumeSlider.value);
-        setVolume(newVolume);
-    });
+    // // Écouteur d'événement pour le curseur de volume
+    // volumeSlider.addEventListener('input', () => {
+    //     const newVolume = parseFloat(volumeSlider.value);
+    //     setVolume(newVolume);
+    // });
 
     // Écouteur d'événement pour les clics sur les cartes et les mots
     gameBoard.addEventListener('click', event => {

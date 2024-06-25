@@ -24,6 +24,7 @@ body {
     text-align: center;
     cursor: pointer;
     transition: transform 0.3s, background-color 0.3s;
+    width: 100px;
 }
 
 .card img {
@@ -37,7 +38,7 @@ body {
 
 .hidden {
     visibility: hidden;
-    display: none; /* Pour cacher l'élément complètement */
+    display: none;
 }
 
 .error {
