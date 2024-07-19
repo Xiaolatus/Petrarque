@@ -1,0 +1,39 @@
+/* Style général de la page */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+}
+
+/* Style du conteneur de jeu */
+.touches {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Style des touches */
+.touche {
+    position: relative;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: transform 0.1s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.touche:active {
+    transform: translateY(5px);
+}
+
+.touche img {
+    width: 100px; /* Largeur fixe pour les images */
+    height: auto; /* Hauteur automatique pour conserver les proportions */
+    object-fit: contain;
+}

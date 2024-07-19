@@ -6,12 +6,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // const volumeSlider = document.getElementById('volume-slider'); // Curseur de volume
 
     const cardData = [
-        { word: 'chat', imgSrc: 'img/chat.png', audioSrc: 'sounds/chat.mp3' },
-        { word: 'chien', imgSrc: 'img/chien.png', audioSrc: 'sounds/chien.mp3' },
-        { word: 'corbeau', imgSrc: 'img/corbeau.png', audioSrc: 'sounds/corbeau.mp3' },
-        { word: 'cochon', imgSrc: 'img/cochon.png', audioSrc: 'sounds/cochon.mp3' },
-        { word: 'mouton', imgSrc: 'img/mouton.png', audioSrc: 'sounds/mouton.mp3' },
-        { word: 'poule', imgSrc: 'img/poule.png', audioSrc: 'sounds/poule.mp3' },
+        { word: 'chat', imgSrc: 'img/chat.jpg', audioSrc: 'sounds/chat.mp3' },
+        { word: 'chien', imgSrc: 'img/chien.jpg', audioSrc: 'sounds/chien.mp3' },
+        { word: 'corbeau', imgSrc: 'img/corbeau.jpg', audioSrc: 'sounds/corbeau.mp3', volume: 0.3 },
+        { word: 'cochon', imgSrc: 'img/cochon.jpg', audioSrc: 'sounds/cochon.mp3' },
+        { word: 'mouton', imgSrc: 'img/mouton.jpg', audioSrc: 'sounds/mouton.mp3' },
+        { word: 'coq', imgSrc: 'img/coq.jpg', audioSrc: 'sounds/coq.mp3' },
         // Ajoutez plus d'animaux ici
     ];
 
@@ -42,28 +42,34 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    function playSound(word) {
+    function stopSound(audio, word) {
+        audio.pause();
+        isPlaying = false; // Réinitialiser l'état de lecture
+
+        // Masquer le logo de volume
+        const card = document.querySelector(`.card[data-word="${word}"]`);
+        const volumeIcon = card.querySelector('.volume-icon');
+        volumeIcon.style.display = 'none';
+    }
+
+    async function playSound(word) {
         const audioSrc = cardData.find(item => item.word === word).audioSrc;
         const audio = new Audio(audioSrc);
 
-        audio.addEventListener('canplaythrough', () => {
+        audio.addEventListener('canplaythrough', async () =>  {
             // audio.volume = audioVolume; // Définir le volume
             audio.play();
             isPlaying = true; // Mettre à jour l'état de lecture
 
-            // Afficher le logo de volume
-            const card = document.querySelector(`.card[data-word="${word}"]`);
-            const volumeIcon = card.querySelector('.volume-icon');
-            volumeIcon.style.display = 'block';
-        });
-
-        audio.addEventListener('ended', () => {
-            isPlaying = false; // Réinitialiser l'état de lecture
-
-            // Masquer le logo de volume
-            const card = document.querySelector(`.card[data-word="${word}"]`);
-            const volumeIcon = card.querySelector('.volume-icon');
-            volumeIcon.style.display = 'none';
+            if ( cardData.find(item => item.word === word).volume ) {
+                audio.volume = cardData.find(item => item.word === word).volume;
+            }
+            // // Afficher le logo de volume
+            // const card = document.querySelector(`.card[data-word="${word}"]`);
+            // const volumeIcon = card.querySelector('.volume-icon');
+            // volumeIcon.style.display = 'block';
+            
+            setTimeout(function() {stopSound(audio, word)}, 3000);
         });
 
         audio.load(); // Charger le fichier audio

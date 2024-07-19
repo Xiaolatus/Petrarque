@@ -24,11 +24,11 @@ body {
     text-align: center;
     cursor: pointer;
     transition: transform 0.3s, background-color 0.3s;
-    width: 100px;
+    width: 150px;
 }
 
 .card img {
-    max-width: 100px;
+    max-width: 150px;
     max-height: 100px;
 }
 
