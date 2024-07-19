@@ -33,22 +33,18 @@ startGameButton.addEventListener('click', () => {
 function startGame(numCards) {
     memoryGame.innerHTML = '';
     const frameworks = [
-        'ane',
-        'blaireau',
-        'cerf',
         'chat', 
+        'cheval',
         'chien',  
-        'cochon',
-        'corbeau', 
-        'hamster', 
-        'lapin', 
-        'loup', 
-        'mouton', 
-        'peruche',
+        'cochon', 
+        'coq',
+        'Eléphant',
+        'Grenouille',
+        'lion',
+        'mouette',
+        'Perroquet',
         'poisson', 
-        'poule', 
-        'poussin',  
-        'souris'];
+        'singe'];
         shuffleArray(frameworks);  // Mélangez les frameworks
     const selectedFrameworks = frameworks.slice(0, numCards / 2);  // Sélectionnez un nombre approprié de frameworks
     const cardArray = [...selectedFrameworks, ...selectedFrameworks];

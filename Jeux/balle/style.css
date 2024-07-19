@@ -1,0 +1,54 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: #f0f0f0;
+}
+
+#game-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #6aa74e;
+    border: 1px solid #ccc;
+}
+
+#ball {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: #ffffff;
+    border-radius: 50%;
+}
+
+#goal-left, #goal-right {
+    position: absolute;
+    top: 50%;
+    width: 20px;
+    height: 200px; /* Hauteur du but */
+    background-color: #FFFFFF; /* Couleur du but */
+}
+
+#goal-left {
+    left: 0;
+    transform: translateY(-50%);
+}
+
+#goal-right {
+    right: 0;
+    transform: translateY(-50%);
+}
+
+#score {
+    color: #ffffff;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 8em;
+}

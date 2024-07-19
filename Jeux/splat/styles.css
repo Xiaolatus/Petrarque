@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #cccccc;
+    overflow: hidden;
+}
+
+#container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.balloon {
+    position: absolute;
+    width: 200px;
+    height: 250px;
+    background-image: url('img/ballon.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.burst {
+    background-image: url('img/ballon_splat.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 150px;
+    height: 150px;
+}

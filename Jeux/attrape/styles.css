@@ -1,0 +1,77 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #a3d9a5;
+}
+
+#gameContainer {
+    position: relative;
+    width: 1000px;
+    height: 500px;
+    background-color: #87ceeb;
+    border: 2px solid #555;
+    overflow: hidden;
+}
+
+/* #tree {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 150px;
+    background-color: #8b4513;
+    border-radius: 0 0 50px 50px;
+} */
+
+#basket {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 50px;
+    background-color: #8b4513;
+    border-radius: 10px;
+}
+
+.apple {
+    position: absolute;
+    top: 0;
+    width: 30px;
+    height: 30px;
+    background-color: red;
+    border-radius: 50%;
+}
+
+#score, #targetScore, #timeLeft {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+}
+
+#targetScore {
+    top: 40px;
+}
+
+#timeLeft {
+    top: 70px;
+}
+
+#controls {
+    margin-top: 20px;
+}
+
+#controls button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+}

@@ -186,7 +186,8 @@ document.addEventListener('DOMContentLoaded', () => {
     //déplacement du personnage
     function movePlayer(e) {
         let newPosition = { ...playerPosition };
-
+        console.log(e.key);
+        console.log(e.target);
         switch(e.key || e.target.id) {
             case 'ArrowUp':
             case 'up':

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeu de Pomme</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="gameContainer">
+        <div id="tree"></div>
+        <div id="basket"></div>
+        <div id="score">Score: 0</div>
+        <div id="targetScore">Cible: 0</div>
+        <div id="timeLeft">Temps restant: 0s</div>
+    </div>
+    <div id="controls">
+        <button onclick="startGame('unlimited')">Mode Illimité</button>
+        <button onclick="startGame('scoreLimited')">Mode Score Limité</button>
+        <button onclick="startGame('timeLimited')">Mode Limité par Temps</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

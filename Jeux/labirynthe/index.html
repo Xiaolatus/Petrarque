@@ -18,10 +18,24 @@
     <div id="maze">  </div>
 
     <div id="controls">
-        <button id="up">Haut</button>
-        <button id="left">Gauche</button>
-        <button id="down">Bas</button>
-        <button id="right">Droite</button>
+        <button id="up" style="align-self: center;"><svg id="up" width="54" height="31" viewBox="0 0 54 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path id="up" fill-rule="evenodd" clip-rule="evenodd" d="M29.4625 1.22012L53.0333 24.791L47.1417 30.6826L26.5167 10.0576L5.89167 30.6826L0 24.791L23.5708 1.22012C24.3522 0.43899 25.4118 0.000175772 26.5167 0.000175772C27.6215 0.000175772 28.6811 0.43899 29.4625 1.22012Z" fill="black"/>
+            </svg>
+        </button>
+        <div style="display: flex; flex-direction: row; justify-content: space-between;">
+        <button id="left"><svg id="left" width="31" height="54" viewBox="0 0 31 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path id="left" fill-rule="evenodd" clip-rule="evenodd" d="M1.21988 23.5707L24.7907 -0.000130856L30.6824 5.89153L10.0574 26.5165L30.6824 47.1415L24.7907 53.0332L1.21988 29.4624C0.438746 28.681 -6.83683e-05 27.6214 -6.83683e-05 26.5165C-6.83683e-05 25.4117 0.438746 24.3521 1.21988 23.5707Z" fill="black"/>
+            </svg>
+        </button>
+        <button id="right"><svg id="right" width="31" height="54" viewBox="0 0 31 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path id="right" fill-rule="evenodd" clip-rule="evenodd" d="M29.4625 29.4625L5.89167 53.0333L0 47.1417L20.625 26.5167L0 5.89167L5.89167 0L29.4625 23.5708C30.2436 24.3522 30.6824 25.4118 30.6824 26.5167C30.6824 27.6215 30.2436 28.6811 29.4625 29.4625Z" fill="black"/>
+            </svg>
+        </button>
+        </div>
+        <button id="down" style="align-self: center;"><svg id="down" width="54" height="31" viewBox="0 0 54 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path id="down" fill-rule="evenodd" clip-rule="evenodd" d="M23.5708 29.4625L-8.78525e-06 5.89167L5.89166 0L26.5167 20.625L47.1417 0L53.0333 5.89167L29.4625 29.4625C28.6811 30.2436 27.6215 30.6824 26.5167 30.6824C25.4118 30.6824 24.3522 30.2436 23.5708 29.4625Z" fill="black"/>
+            </svg>
+        </button>
     </div>
     
     <script src="script.js"></script>
